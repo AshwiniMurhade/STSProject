@@ -4,7 +4,10 @@ import org.springframework.http.HttpStatus;
 
 public class ErrorMessage {
 	private HttpStatus status;
-    private String message;
+	String message;
+	public ErrorMessage() {
+		super();
+	}
 	public ErrorMessage(HttpStatus status, String message) {
 		super();
 		this.status = status;
@@ -22,5 +25,10 @@ public class ErrorMessage {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-    
+	@Override
+	public String toString() {
+		return "ErrorMessage [status=" + status + ", message=" + message + "]";
+	}
+	
+	
 }
